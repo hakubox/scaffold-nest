@@ -1,0 +1,19 @@
+type Cat {
+  id: ID!
+  name: String!
+  breed: String
+}
+
+type RootMutation {
+  addCat(newCatData: CatInput!): Cat!
+  removeCat(id: String!): Boolean!
+}
+
+type Query {
+  cat(id: Int!): Cat
+}
+
+input CatInput {
+    name: String!
+    breed: String
+}
